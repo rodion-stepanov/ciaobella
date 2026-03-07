@@ -1,0 +1,113 @@
+<!-- Отзывы учеников — галерея скриншотов -->
+<section id="reviews" class="py-24 bg-white relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-terracotta/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-olive/5 rounded-full blur-3xl"></div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center gap-2 text-terracotta font-medium mb-4">
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <span>Отзывы</span>
+            </div>
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-deep-wine mb-6">
+                Что говорят наши <span class="italic text-terracotta">ученики</span>
+            </h2>
+            <p class="text-gray-500 text-lg leading-relaxed">
+                Реальные отзывы от тех, кто уже учит итальянский вместе с нами
+            </p>
+        </div>
+
+        <!-- Сетка скриншотов -->
+        <div class="reviews-grid">
+            <!-- Скриншот 1 -->
+            <figure class="review-screenshot" data-review-idx="0">
+                <div class="review-screenshot__img-wrap">
+                    <img src="/assets/images/review/01_photo_2024-10-27_11-.jpg" alt="Отзыв ученика 1" loading="lazy" />
+                </div>
+            </figure>
+
+            <!-- Скриншот 2 -->
+            <figure class="review-screenshot" data-review-idx="1">
+                <div class="review-screenshot__img-wrap">
+                    <img src="/assets/images/review/02_photo_2024-09-10_14-.jpg" alt="Отзыв ученика 2" loading="lazy" />
+                </div>
+            </figure>
+
+            <!-- Скриншот 3 -->
+            <figure class="review-screenshot" data-review-idx="2">
+                <div class="review-screenshot__img-wrap">
+                    <img src="/assets/images/review/03_photo_2024-09-10_14-.jpg" alt="Отзыв ученика 3" loading="lazy" />
+                </div>
+            </figure>
+
+            <!-- Скриншот 4 -->
+            <figure class="review-screenshot" data-review-idx="3">
+                <div class="review-screenshot__img-wrap">
+                    <img src="/assets/images/review/04_image_12.jpg" alt="Отзыв ученика 4" loading="lazy" />
+                </div>
+            </figure>
+
+            <!-- Скриншот 5 -->
+            <figure class="review-screenshot" data-review-idx="4">
+                <div class="review-screenshot__img-wrap">
+                    <img src="/assets/images/review/05_photo_2024-09-10_14-.jpg" alt="Отзыв ученика 5" loading="lazy" />
+                </div>
+            </figure>
+
+            <!-- Скриншот 6 -->
+            <figure class="review-screenshot" data-review-idx="5">
+                <div class="review-screenshot__img-wrap">
+                    <img src="/assets/images/review/06_photo_2024-09-10_14-.jpg" alt="Отзыв ученика 6" loading="lazy" />
+                </div>
+            </figure>
+
+            <!-- Скриншот 7 -->
+            <figure class="review-screenshot" data-review-idx="6">
+                <div class="review-screenshot__img-wrap">
+                    <img src="/assets/images/review/07_photo_2024-09-10_14-.jpg" alt="Отзыв ученика 7" loading="lazy" />
+                </div>
+            </figure>
+
+            <!-- Скриншот 8 -->
+            <figure class="review-screenshot" data-review-idx="7">
+                <div class="review-screenshot__img-wrap">
+                    <img src="/assets/images/review/08_photo_2024-09-10_14-.jpg" alt="Отзыв ученика 8" loading="lazy" />
+                </div>
+            </figure>
+
+            <!-- Скриншот 9 -->
+            <figure class="review-screenshot" data-review-idx="8">
+                <div class="review-screenshot__img-wrap">
+                    <img src="/assets/images/review/09_photo_2024-09-10_14-.jpg" alt="Отзыв ученика 9" loading="lazy" />
+                </div>
+            </figure>
+
+            <!-- Скриншот 10 -->
+            <figure class="review-screenshot" data-review-idx="9">
+                <div class="review-screenshot__img-wrap">
+                    <img src="/assets/images/review/10_photo_2024-09-10_14-.jpg" alt="Отзыв ученика 10" loading="lazy" />
+                </div>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Lightbox для просмотра скриншота -->
+    <div class="review-lightbox" id="review-lightbox">
+        <div class="review-lightbox__backdrop"></div>
+        <div class="review-lightbox__content">
+            <button class="review-lightbox__close" aria-label="Закрыть">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <button class="review-lightbox__nav review-lightbox__nav--prev" aria-label="Предыдущий">
+                <i data-lucide="chevron-left" class="w-6 h-6"></i>
+            </button>
+            <div class="review-lightbox__img-container">
+                <img class="review-lightbox__bg" src="" alt="" aria-hidden="true" />
+                <img class="review-lightbox__img" src="" alt="Отзыв ученика" />
+            </div>
+            <button class="review-lightbox__nav review-lightbox__nav--next" aria-label="Следующий">
+                <i data-lucide="chevron-right" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </div>
+</section>

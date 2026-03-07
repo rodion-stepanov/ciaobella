@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ciaobella — школа итальянского языка. Авторская методика, носители языка, погружение в культуру Италии."
+    />
+    <meta
+      name="keywords"
+      content="итальянский язык, курсы итальянского, школа итальянского, изучение итальянского"
+    />
+    <meta property="og:title" content="Ciaobella — Школа итальянского языка" />
+    <meta
+      property="og:description"
+      content="Влюбитесь в Италию через её язык. Авторская методика обучения."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/assets/images/icon.svg" type="image/svg+xml" />
+    <title>Ciaobella — Школа итальянского языка</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "italia-green": "var(--color-italia-green)",
+              "italia-red": "var(--color-italia-red)",
+              "warm-cream": "var(--color-warm-cream)",
+              terracotta: "var(--color-terracotta)",
+              olive: "var(--color-olive)",
+              "deep-wine": "var(--color-deep-wine)",
+              gold: "var(--color-gold)",
+              lavender: "var(--color-lavender)",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="font-body bg-warm-cream text-gray-800 overflow-x-hidden">
+    <%- include('./components/header.html') %>
+
+    <%- include('./components/hero.html') %>
+
+    <!-- SVG-разделитель: hero → about -->
+    <svg class="svg-divider" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 Q360,5 720,30 T1440,30" />
+    </svg>
+
+    <%- include('./components/about.html') %>
+
+    <%- include('./components/advantages.html') %>
+
+    <!-- SVG-разделитель: advantages → courses -->
+    <svg class="svg-divider" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,50 C240,10 480,50 720,25 S1200,40 1440,15" />
+    </svg>
+
+    <%- include('./components/courses.html') %>
+
+
+
+    <%- include('./components/reviews.html') %>
+
+    <!-- SVG-разделитель: reviews → faq -->
+    <svg class="svg-divider" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,20 Q240,55 480,20 T960,35 Q1200,10 1440,40" />
+    </svg>
+
+    <%- include('./components/faq.html') %>
+
+    <%- include('./components/contact.html') %>
+
+    <%- include('./components/footer.html') %>
+
+    <!-- Плавающая кнопка «Связаться» -->
+    <a href="https://t.me/Elena_ciaobella" target="_blank" rel="noopener noreferrer"
+       class="floating-contact-btn" aria-label="Связаться">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/>
+      </svg>
+      Связаться
+    </a>
+
+    <!-- Переключатель палитр -->
+    <div class="palette-switcher">
+      <span class="palette-label">Палитра:</span>
+      <button
+        class="palette-btn active"
+        data-palette="riviera"
+        title="Итальянская Ривьера"
+        aria-label="Палитра Итальянская Ривьера"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="velvet"
+        title="Венецианский бархат"
+        aria-label="Палитра Венецианский бархат"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="rosa-neon"
+        title="Rosa Neon"
+        aria-label="Палитра Rosa Neon"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="tramonto"
+        title="Tramonto (Закат)"
+        aria-label="Палитра Tramonto"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="mare"
+        title="Mare (Море)"
+        aria-label="Палитра Mare"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="giardino"
+        title="Giardino (Сад)"
+        aria-label="Палитра Giardino"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="viola"
+        title="Viola (Фиалка)"
+        aria-label="Палитра Viola"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="peonia"
+        title="Peonia (Пион)"
+        aria-label="Палитра Peonia"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="sole"
+        title="Sole (Солнце)"
+        aria-label="Палитра Sole"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="glicine"
+        title="Glicine (Глициния)"
+        aria-label="Палитра Glicine"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="farfalla"
+        title="Farfalla (Бабочка)"
+        aria-label="Палитра Farfalla"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="aurora"
+        title="Aurora (Рассвет)"
+        aria-label="Палитра Aurora"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="confetti"
+        title="Confetti (Конфетти)"
+        aria-label="Палитра Confetti"
+      ></button>
+      <button
+        class="palette-btn"
+        data-palette="basilico"
+        title="Basilico (Базилик)"
+        aria-label="Палитра Basilico"
+      ></button>
+
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,270 @@
+<!-- Раздел «О себе» — Елена Степанова -->
+<section id="about" class="py-24 bg-white relative overflow-hidden">
+  <!-- Фон -->
+  <div
+    class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-warm-cream/50 to-transparent"
+  ></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Фото -->
+      <div class="relative about-image">
+        <div class="relative z-10">
+          <div
+            class="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gold/30 to-terracotta/20"
+          >
+            <img
+              src="/assets/images/Elena.jpg"
+              alt="Елена Степанова — основатель школы Ciaobella"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Бейдж «Опыт» — автодата -->
+        <div
+          class="absolute -right-6 top-10 bg-terracotta text-white rounded-2xl p-6 shadow-xl hidden lg:block"
+        >
+          <div class="text-4xl font-bold font-display">
+            <span data-auto-years="2017"></span>
+          </div>
+          <div class="text-sm opacity-90">лет опыта</div>
+        </div>
+
+        <!-- Бейдж «Сертификат» -->
+        <div
+          class="absolute -left-6 bottom-20 bg-white rounded-2xl p-4 shadow-xl hidden lg:block"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="w-12 h-12 bg-italia-green/20 rounded-full flex items-center justify-center"
+            >
+              <i data-lucide="award" class="w-6 h-6 text-italia-green"></i>
+            </div>
+            <div>
+              <div class="font-semibold text-deep-wine">CILS C2</div>
+              <div class="text-xs text-gray-500">Уровень носителя</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Текст -->
+      <div class="about-content">
+        <div
+          class="inline-flex items-center gap-2 text-terracotta font-medium mb-4"
+        >
+          <i data-lucide="heart" class="w-5 h-5"></i>
+          <span>Основатель школы</span>
+        </div>
+
+        <h2
+          class="font-display text-4xl md:text-5xl font-bold text-deep-wine mb-6"
+        >
+          Ciao bella! Я —
+          <span class="italic text-terracotta">Елена</span>
+        </h2>
+
+        <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+          <p>
+            Сертифицированный преподаватель итальянского языка с
+            <strong class="text-deep-wine"
+              >дипломом CILS C2</strong
+            >
+            — уровень носителя. Веду онлайн и офлайн курсы при посольстве
+            Италии, являюсь экзаменатором CILS и автором учебных программ.
+          </p>
+          <p>
+            Но главное — я преподаватель, который
+            <em>понимает и ценит</em> своих студентов, их время и эмоции.
+            Я создала <strong class="text-deep-wine">Ciaobella</strong>,
+            чтобы появилось комфортное пространство для изучения итальянского,
+            где вас мягко направляют и заряжают позитивом.
+          </p>
+        </div>
+
+        <!-- Факты -->
+        <div class="mt-8 grid grid-cols-2 gap-4">
+          <div class="bg-warm-cream rounded-xl p-4">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 bg-italia-green/20 rounded-full flex items-center justify-center"
+              >
+                <i
+                  data-lucide="book-open"
+                  class="w-5 h-5 text-italia-green"
+                ></i>
+              </div>
+              <div>
+                <div class="font-medium text-deep-wine">
+                  <span data-auto-years="2010"></span> лет в italiano
+                </div>
+                <div class="text-sm text-gray-500">Психолингвист</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-warm-cream rounded-xl p-4">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 bg-terracotta/20 rounded-full flex items-center justify-center"
+              >
+                <i
+                  data-lucide="users"
+                  class="w-5 h-5 text-terracotta"
+                ></i>
+              </div>
+              <div>
+                <div class="font-medium text-deep-wine">От 10 до 70 лет</div>
+                <div class="text-sm text-gray-500">Возраст учеников</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <blockquote
+          class="mt-8 border-l-4 border-terracotta pl-6 italic text-xl text-gray-700 font-display"
+        >
+          «Итальянский — это не просто язык. Это способ чувствовать жизнь
+          ярче.»
+        </blockquote>
+
+        <!-- Кнопка «Подробнее» -->
+        <button
+          id="about-more-btn"
+          class="mt-8 inline-flex items-center gap-2 bg-gradient-to-r from-terracotta to-italia-red text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+        >
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
+          Подробнее обо мне
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Модалка «Подробнее обо мне» -->
+<div class="course-modal" id="modal-about">
+  <div class="course-modal__backdrop"></div>
+  <div class="course-modal__container" style="max-width: 640px">
+    <button class="course-modal__close">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+
+    <div class="course-modal__header" style="text-align: center">
+      <div class="course-modal__title">Елена Степанова</div>
+      <div class="course-modal__subtitle">
+        Основатель школы · Преподаватель · Автор программ
+      </div>
+    </div>
+
+    <div class="course-modal__body">
+      <p class="course-modal__desc">
+        Привет! Я Лена, я люблю жизнь, языки и делиться знаниями
+        и прекрасным настроением!
+      </p>
+
+      <h4 class="course-modal__section-title">Квалификация</h4>
+      <ul class="course-modal__features">
+        <li>
+          <i data-lucide="check" class="w-4 h-4 text-italia-green"></i>
+          Владею итальянским на уровне <strong>C2</strong> (сертификат CILS)
+        </li>
+        <li>
+          <i data-lucide="check" class="w-4 h-4 text-italia-green"></i>
+          Опыт преподавания —
+          <strong><span data-auto-years="2017"></span> лет</strong>
+        </li>
+        <li>
+          <i data-lucide="check" class="w-4 h-4 text-italia-green"></i>
+          Веду онлайн и офлайн курсы при посольстве Италии
+        </li>
+        <li>
+          <i data-lucide="check" class="w-4 h-4 text-italia-green"></i>
+          Работаю с учениками от 10 до 70 лет
+        </li>
+        <li>
+          <i data-lucide="check" class="w-4 h-4 text-italia-green"></i>
+          Психолингвист
+        </li>
+        <li>
+          <i data-lucide="check" class="w-4 h-4 text-italia-green"></i>
+          Экзаменатор CILS
+        </li>
+        <li>
+          <i data-lucide="check" class="w-4 h-4 text-italia-green"></i>
+          Постоянный участник вебинаров по повышению квалификации
+          от ведущих итальянских издательств
+        </li>
+      </ul>
+
+      <h4 class="course-modal__section-title">Мой подход</h4>
+      <p class="course-modal__desc">
+        Я создала комфортное пространство, в котором вас ценят и мягко
+        направляют. В моей команде работают только преподаватели
+        с высоким уровнем языка. Никогда не перестаю учиться —
+        и вам желаю того же. Заряжаю позитивом и хорошим настроением&nbsp;:)
+      </p>
+
+      <h4 class="course-modal__section-title">Сертификаты</h4>
+      <div
+        class="certificate-grid"
+        id="about-certificates"
+      >
+        <figure class="certificate-card">
+          <img
+            src="/assets/images/certificates/cils-c2.jpg.webp"
+            alt="Сертификат CILS C2"
+            class="certificate-card__img"
+            loading="lazy"
+          />
+          <figcaption class="certificate-card__caption">
+            CILS C2 — уровень носителя
+          </figcaption>
+        </figure>
+        <figure class="certificate-card">
+          <img
+            src="/assets/images/certificates/teacher.png.webp"
+            alt="Диплом преподавателя итальянского"
+            class="certificate-card__img"
+            loading="lazy"
+          />
+          <figcaption class="certificate-card__caption">
+            Диплом преподавателя
+          </figcaption>
+        </figure>
+        <figure class="certificate-card">
+          <img
+            src="/assets/images/certificates/psycholinguist.jpg.webp"
+            alt="Сертификат психолингвиста"
+            class="certificate-card__img"
+            loading="lazy"
+          />
+          <figcaption class="certificate-card__caption">
+            Психолингвистика
+          </figcaption>
+        </figure>
+        <figure class="certificate-card">
+          <img
+            src="/assets/images/certificates/course.jpg.webp"
+            alt="Сертификат о прохождении курса"
+            class="certificate-card__img"
+            loading="lazy"
+          />
+          <figcaption class="certificate-card__caption">
+            Курс повышения квалификации
+          </figcaption>
+        </figure>
+        <figure class="certificate-card">
+          <img
+            src="/assets/images/certificates/course-2.webp"
+            alt="Сертификат о прохождении курса"
+            class="certificate-card__img"
+            loading="lazy"
+          />
+          <figcaption class="certificate-card__caption">
+            Дополнительный курс
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>

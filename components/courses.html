@@ -1,0 +1,574 @@
+<!-- Courses Section — Секция курсов с кликабельными карточками и модалками -->
+<section id="courses" class="py-24 bg-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-warm-cream/30 to-transparent"></div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center gap-2 text-terracotta font-medium mb-4">
+                <i data-lucide="book-marked" class="w-5 h-5"></i>
+                <span>Наши курсы</span>
+            </div>
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-deep-wine mb-6">
+                Выберите свой <span class="italic text-terracotta">путь</span>
+            </h2>
+            <p class="text-xl text-gray-600">
+                Программы для любого уровня и цели
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════
+             Категория 1: Курсы в мессенджере
+             ═══════════════════════════════════════ -->
+        <div class="course-category">
+            <div class="course-category__icon bg-terracotta/10">
+                <i data-lucide="smartphone" class="w-5 h-5 text-terracotta"></i>
+            </div>
+            <div>
+                <div class="course-category__label">Курсы в мессенджере</div>
+                <div class="course-category__desc">Учитесь в удобном темпе, прямо в телефоне</div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Course 1: С нуля -->
+            <div class="pricing-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group cursor-pointer" data-course-id="zero">
+                <div class="pricing-card__accent"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="course-badge course-badge--green">С нуля</span>
+                        <span class="text-gray-400 text-sm">4 недели</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-deep-wine mb-3">С итальянским до lunedì и обратно</h3>
+                    <p class="text-gray-600 mb-6">Месяц итальянского в любом удобном мессенджере. Видео, конспекты и индивидуальные задания каждый день.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Пн-Пт по 15-20 минут</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Видео-созвон раз в неделю</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Индивидуальные задания</span>
+                        </li>
+                    </ul>
+                    <div class="pricing-footer flex items-end justify-between">
+                        <div>
+                            <span class="text-3xl font-bold text-deep-wine font-display">9 000 ₽</span>
+                        </div>
+                        <span class="w-12 h-12 bg-terracotta text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 2: A2-C2 -->
+            <div class="pricing-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group relative cursor-pointer" data-course-id="a2c2">
+                <div class="absolute top-4 right-4 bg-terracotta text-white text-xs px-3 py-1 rounded-full font-medium">Популярный</div>
+                <div class="pricing-card__accent"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="course-badge course-badge--terracotta">A2-C2</span>
+                        <span class="text-gray-400 text-sm">4 недели</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-deep-wine mb-3">С итальянским до lunedì и обратно</h3>
+                    <p class="text-gray-600 mb-6">Месяц итальянского в любом удобном мессенджере. Индивидуальные задания каждый день с понедельника по пятницу.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Пн-Пт по 15-20 минут</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Уровни от A2 до C2</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Индивидуальные задания</span>
+                        </li>
+                    </ul>
+                    <div class="pricing-footer flex items-end justify-between">
+                        <div>
+                            <span class="text-3xl font-bold text-deep-wine font-display">8 000 ₽</span>
+                        </div>
+                        <span class="w-12 h-12 bg-terracotta text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 3: Кино -->
+            <div class="pricing-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group cursor-pointer" data-course-id="cinema">
+                <div class="pricing-card__accent"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="course-badge course-badge--gold">Кино</span>
+                        <span class="text-gray-400 text-sm">1 фильм</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-deep-wine mb-3">С итальянским как в кино</h3>
+                    <p class="text-gray-600 mb-6">Смотрите любимый фильм или мультфильм на итальянском. Отрывки по 5 минут с заданиями и обратной связью.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Отрывки с заданиями</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Обратная связь в мессенджере</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Финальное сочинение с проверкой</span>
+                        </li>
+                    </ul>
+                    <div class="pricing-footer flex items-end justify-between">
+                        <div>
+                            <span class="text-3xl font-bold text-deep-wine font-display">8 500 ₽</span>
+                        </div>
+                        <span class="w-12 h-12 bg-terracotta text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Разделитель -->
+        <hr class="course-divider">
+
+        <!-- ═══════════════════════════════════════
+             Категория 2: Занятия с преподавателем
+             ═══════════════════════════════════════ -->
+        <div class="course-category">
+            <div class="course-category__icon bg-olive/10">
+                <i data-lucide="users" class="w-5 h-5 text-olive"></i>
+            </div>
+            <div>
+                <div class="course-category__label">Занятия с преподавателем</div>
+                <div class="course-category__desc">Живые уроки онлайн — индивидуально, в группе или разговорная практика</div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Course 4: Индивидуально -->
+            <div class="pricing-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group cursor-pointer" data-course-id="individual">
+                <div class="pricing-card__accent"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="course-badge course-badge--olive">1 на 1</span>
+                        <span class="text-gray-400 text-sm">60 минут</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-deep-wine mb-3">Индивидуально</h3>
+                    <p class="text-gray-600 mb-6">Классический формат 1 на 1 с преподавателем. Уроки под любые ваши запросы: для себя, к экзаменам, работе.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Любые запросы</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Подготовка к экзаменам</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Для работы и поступления</span>
+                        </li>
+                    </ul>
+                    <div class="pricing-footer flex items-end justify-between">
+                        <div>
+                            <span class="text-sm text-gray-400">от</span>
+                            <span class="text-3xl font-bold text-deep-wine font-display ml-1">4 000 ₽</span>
+                        </div>
+                        <span class="w-12 h-12 bg-terracotta text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 5: Мини группа -->
+            <div class="pricing-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group cursor-pointer" data-course-id="minigroup">
+                <div class="pricing-card__accent"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="course-badge course-badge--green">3-4 человека</span>
+                        <span class="text-gray-400 text-sm">70 минут</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-deep-wine mb-3">В мини группе</h3>
+                    <p class="text-gray-600 mb-6">Итальянский в уютной компании онлайн. 2 раза в неделю с чашкой кофе и под пледиком.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>2 занятия в неделю</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>3-4 студента в группе</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Умеренная домашка</span>
+                        </li>
+                    </ul>
+                    <div class="pricing-footer flex items-end justify-between">
+                        <div>
+                            <span class="text-3xl font-bold text-deep-wine font-display">11 000 ₽</span>
+                        </div>
+                        <span class="w-12 h-12 bg-terracotta text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 6: Parliamo -->
+            <div class="pricing-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group cursor-pointer" data-course-id="parliamo">
+                <div class="pricing-card__accent"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="course-badge course-badge--wine">Все уровни</span>
+                        <span class="text-gray-400 text-sm">20 минут</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-deep-wine mb-3">Parliamo?</h3>
+                    <p class="text-gray-600 mb-6">Разговорные уроки на любой удобной платформе. Живое общение с преподавателем для всех уровней.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>От начинающих до C2</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Живое общение</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-600">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta"></i>
+                            <span>Любая платформа</span>
+                        </li>
+                    </ul>
+                    <div class="pricing-footer flex items-end justify-between">
+                        <div>
+                            <span class="text-sm text-gray-400">от</span>
+                            <span class="text-3xl font-bold text-deep-wine font-display ml-1">800 ₽</span>
+                        </div>
+                        <span class="w-12 h-12 bg-terracotta text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     Модалки курсов — подробности по каждому
+     ========================================== -->
+
+<!-- Модалка: С нуля -->
+<div class="course-modal" id="modal-zero">
+  <div class="course-modal__backdrop"></div>
+  <div class="course-modal__container">
+    <button class="course-modal__close">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+
+    <div class="course-modal__header">
+      <span class="course-modal__badge">С нуля · 4 недели</span>
+      <div class="course-modal__title">С итальянским до lunedì и обратно</div>
+      <div class="course-modal__subtitle">Месяц итальянского в мессенджере — с нуля до первых фраз</div>
+    </div>
+
+    <div class="course-modal__body">
+      <div class="course-modal__price-row">
+        <span class="course-modal__price">9 000 ₽</span>
+        <span class="course-modal__duration">4 недели · Пн–Пт</span>
+      </div>
+
+      <p class="course-modal__desc">
+        Учитесь итальянскому каждый день по 15-20 минут прямо в телефоне.
+        Видеоуроки, конспекты и домашние задания — в любом удобном мессенджере.
+        Раз в неделю — живой созвон с преподавателем.
+      </p>
+
+      <h4 class="course-modal__section-title">Что входит</h4>
+      <ul class="course-modal__features">
+        <li><i data-lucide="check" class="w-4 h-4 text-italia-green"></i> Ежедневные задания Пн-Пт по 15-20 минут</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-italia-green"></i> Видеоуроки и конспекты</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-italia-green"></i> Индивидуальные задания с обратной связью</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-italia-green"></i> Видео-созвон раз в неделю</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-italia-green"></i> Обучение в удобном мессенджере</li>
+      </ul>
+
+      <h4 class="course-modal__section-title">Для кого</h4>
+      <p class="course-modal__desc">
+        Для тех, кто никогда не изучал итальянский и хочет попробовать
+        в комфортном темпе. Никакого стресса — только удовольствие
+        от новых слов и фраз.
+      </p>
+    </div>
+
+    <div class="course-modal__footer">
+      <a href="#" class="course-modal__cta">
+        Записаться
+        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка: A2-C2 -->
+<div class="course-modal" id="modal-a2c2">
+  <div class="course-modal__backdrop"></div>
+  <div class="course-modal__container">
+    <button class="course-modal__close">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+
+    <div class="course-modal__header">
+      <span class="course-modal__badge">A2-C2 · 4 недели</span>
+      <div class="course-modal__title">С итальянским до lunedì и обратно</div>
+      <div class="course-modal__subtitle">Для тех, кто уже знает основы и хочет расти дальше</div>
+    </div>
+
+    <div class="course-modal__body">
+      <div class="course-modal__price-row">
+        <span class="course-modal__price">8 000 ₽</span>
+        <span class="course-modal__duration">4 недели · Пн–Пт</span>
+      </div>
+
+      <p class="course-modal__desc">
+        Месяц итальянского в мессенджере с индивидуальными заданиями
+        каждый день. Программа адаптируется под ваш уровень — от A2 до C2.
+      </p>
+
+      <h4 class="course-modal__section-title">Что входит</h4>
+      <ul class="course-modal__features">
+        <li><i data-lucide="check" class="w-4 h-4 text-terracotta"></i> Ежедневные задания Пн-Пт по 15-20 минут</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-terracotta"></i> Программа для вашего уровня (A2-C2)</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-terracotta"></i> Индивидуальные задания с обратной связью</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-terracotta"></i> Грамматика, лексика, аудирование</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-terracotta"></i> Обучение в удобном мессенджере</li>
+      </ul>
+
+      <h4 class="course-modal__section-title">Для кого</h4>
+      <p class="course-modal__desc">
+        Для тех, кто уже изучал итальянский и хочет структурированно
+        продвигаться к новому уровню. Подходит для занятых людей —
+        всего 15-20 минут в день.
+      </p>
+    </div>
+
+    <div class="course-modal__footer">
+      <a href="#" class="course-modal__cta">
+        Записаться
+        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка: Parliamo -->
+<div class="course-modal" id="modal-parliamo">
+  <div class="course-modal__backdrop"></div>
+  <div class="course-modal__container">
+    <button class="course-modal__close">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+
+    <div class="course-modal__header">
+      <span class="course-modal__badge">Все уровни · 20 минут</span>
+      <div class="course-modal__title">Parliamo?</div>
+      <div class="course-modal__subtitle">Разговорная практика с преподавателем</div>
+    </div>
+
+    <div class="course-modal__body">
+      <div class="course-modal__price-row">
+        <span class="course-modal__price">от 800 ₽</span>
+        <span class="course-modal__duration">20 минут</span>
+      </div>
+
+      <p class="course-modal__desc">
+        Короткие разговорные сессии на любой удобной платформе.
+        Живое общение с преподавателем — для всех уровней, от начинающих до C2.
+      </p>
+
+      <h4 class="course-modal__section-title">Что входит</h4>
+      <ul class="course-modal__features">
+        <li><i data-lucide="check" class="w-4 h-4 text-deep-wine"></i> Разговорная практика 20 минут</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-deep-wine"></i> Подходит для всех уровней</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-deep-wine"></i> Любая удобная платформа</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-deep-wine"></i> Живое общение с преподавателем</li>
+      </ul>
+
+      <h4 class="course-modal__section-title">Для кого</h4>
+      <p class="course-modal__desc">
+        Для тех, кто хочет практиковать разговорный итальянский
+        без долгих уроков. Идеально для поддержания языка
+        или преодоления языкового барьера.
+      </p>
+    </div>
+
+    <div class="course-modal__footer">
+      <a href="#" class="course-modal__cta">
+        Записаться
+        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка: Кино -->
+<div class="course-modal" id="modal-cinema">
+  <div class="course-modal__backdrop"></div>
+  <div class="course-modal__container">
+    <button class="course-modal__close">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+
+    <div class="course-modal__header">
+      <span class="course-modal__badge">Кино · 1 фильм</span>
+      <div class="course-modal__title">С итальянским как в кино</div>
+      <div class="course-modal__subtitle">Учите итальянский через любимые фильмы</div>
+    </div>
+
+    <div class="course-modal__body">
+      <div class="course-modal__price-row">
+        <span class="course-modal__price">8 500 ₽</span>
+        <span class="course-modal__duration">1 фильм</span>
+      </div>
+
+      <p class="course-modal__desc">
+        Смотрите любимый фильм или мультфильм на итальянском.
+        Отрывки по 5 минут с заданиями и обратной связью от преподавателя.
+      </p>
+
+      <h4 class="course-modal__section-title">Что входит</h4>
+      <ul class="course-modal__features">
+        <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Отрывки по 5 минут с заданиями</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Обратная связь в мессенджере</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Финальное сочинение с проверкой</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Лексика и грамматика через кино</li>
+      </ul>
+
+      <h4 class="course-modal__section-title">Для кого</h4>
+      <p class="course-modal__desc">
+        Для тех, кто любит кино и хочет учить итальянский нескучно.
+        Подходит для любого уровня — фильм подбирается индивидуально.
+      </p>
+    </div>
+
+    <div class="course-modal__footer">
+      <a href="#" class="course-modal__cta">
+        Записаться
+        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка: Индивидуально -->
+<div class="course-modal" id="modal-individual">
+  <div class="course-modal__backdrop"></div>
+  <div class="course-modal__container">
+    <button class="course-modal__close">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+
+    <div class="course-modal__header">
+      <span class="course-modal__badge">1 на 1 · 60 минут</span>
+      <div class="course-modal__title">Индивидуальные занятия</div>
+      <div class="course-modal__subtitle">Персональный подход к вашим целям</div>
+    </div>
+
+    <div class="course-modal__body">
+      <div class="course-modal__price-row">
+        <span class="course-modal__price">от 4 000 ₽</span>
+        <span class="course-modal__duration">60 минут</span>
+      </div>
+
+      <p class="course-modal__desc">
+        Классический формат 1 на 1 с преподавателем.
+        Программа полностью под ваши цели: для себя, подготовка к экзaменам,
+        для работы или поступления.
+      </p>
+
+      <h4 class="course-modal__section-title">Что входит</h4>
+      <ul class="course-modal__features">
+        <li><i data-lucide="check" class="w-4 h-4 text-olive"></i> Индивидуальная программа</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-olive"></i> Любые запросы и цели</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-olive"></i> Подготовка к экзаменам (CILS, CELI)</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-olive"></i> Для работы и поступления</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-olive"></i> Гибкое расписание</li>
+      </ul>
+
+      <h4 class="course-modal__section-title">Для кого</h4>
+      <p class="course-modal__desc">
+        Для тех, кому нужен максимально персональный подход.
+        Идеально для подготовки к конкретным целям или просто
+        для изучения языка в своём темпе.
+      </p>
+    </div>
+
+    <div class="course-modal__footer">
+      <a href="#" class="course-modal__cta">
+        Записаться
+        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка: Мини группа -->
+<div class="course-modal" id="modal-minigroup">
+  <div class="course-modal__backdrop"></div>
+  <div class="course-modal__container">
+    <button class="course-modal__close">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+
+    <div class="course-modal__header">
+      <span class="course-modal__badge">3-4 человека · 70 минут</span>
+      <div class="course-modal__title">Занятия в мини группе</div>
+      <div class="course-modal__subtitle">Уютная компания для изучения итальянского</div>
+    </div>
+
+    <div class="course-modal__body">
+      <div class="course-modal__price-row">
+        <span class="course-modal__price">11 000 ₽</span>
+        <span class="course-modal__duration">70 минут · 2 р/нед</span>
+      </div>
+
+      <p class="course-modal__desc">
+        Итальянский в уютной компании онлайн. 2 раза в неделю —
+        с чашкой кофе и под пледиком. Маленькая группа, где каждый получает внимание.
+      </p>
+
+      <h4 class="course-modal__section-title">Что входит</h4>
+      <ul class="course-modal__features">
+        <li><i data-lucide="check" class="w-4 h-4 text-italia-green"></i> 2 занятия в неделю по 70 минут</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-italia-green"></i> 3-4 студента в группе</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-italia-green"></i> Умеренная домашка</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-italia-green"></i> Групповая динамика и общение</li>
+        <li><i data-lucide="check" class="w-4 h-4 text-italia-green"></i> Регулярная практика</li>
+      </ul>
+
+      <h4 class="course-modal__section-title">Для кого</h4>
+      <p class="course-modal__desc">
+        Для тех, кто любит учиться в компании и ценит регулярность.
+        Маленькая группа позволяет каждому получить достаточно
+        внимания и практики.
+      </p>
+    </div>
+
+    <div class="course-modal__footer">
+      <a href="#" class="course-modal__cta">
+        Записаться
+        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </div>
+</div>

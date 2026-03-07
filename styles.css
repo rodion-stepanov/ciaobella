@@ -1,0 +1,1695 @@
+/* styles.css — Ciaobella */
+
+/* ==========================================
+   Цветовые палитры
+   Палитра «Итальянская Ривьера» — основная
+   Палитра «Венецианский бархат» — альтернативная
+   ========================================== */
+:root {
+  /* Палитра: Итальянская Ривьера — лёгкая, воздушная */
+  --color-italia-green: #4D8A7F;
+  --color-italia-red: #C46B5A;
+  --color-italia-white: #F7F5F2;
+  --color-warm-cream: #FDFAF7;
+  --color-terracotta: #C47A6A;
+  --color-olive: #7AB5A0;
+  --color-deep-wine: #3D2E35;
+  --color-gold: #C9A96E;
+  --color-rose: #F5DDB6;
+  --color-lavender: #A89BBB;
+  --color-blush: #F9F0EA;
+}
+
+/* Альтернативная палитра: Венецианский бархат — нежная, тёплая */
+:root[data-palette="velvet"] {
+  --color-italia-green: #6D9468;
+  --color-italia-red: #B86B63;
+  --color-italia-white: #F9F6F4;
+  --color-warm-cream: #FDF9F6;
+  --color-terracotta: #B87A72;
+  --color-olive: #8FB282;
+  --color-deep-wine: #4A2F3D;
+  --color-gold: #B89E6A;
+  --color-rose: #F0C9C7;
+  --color-lavender: #A89BAF;
+  --color-blush: #F6EBE6;
+}
+
+/* Палитра: Rosa Neon — яркая, контрастная */
+:root[data-palette="rosa-neon"] {
+  --color-italia-green: #94c64f;
+  --color-italia-red: #ff006a;
+  --color-italia-white: #eeeeee;
+  --color-warm-cream: #F5F3F4;
+  --color-terracotta: #ff3d85;
+  --color-olive: #a8d965;
+  --color-deep-wine: #352c31;
+  --color-gold: #E8CC6E;
+  --color-rose: #FFD6E5;
+  --color-lavender: #D4B8D9;
+  --color-blush: #FBE8EE;
+}
+
+/* Палитра: Tramonto — тёплый закат, персиковый */
+:root[data-palette="tramonto"] {
+  --color-italia-green: #C9A96E;
+  --color-italia-red: #E8856B;
+  --color-italia-white: #FFF8F2;
+  --color-warm-cream: #FFF5ED;
+  --color-terracotta: #F4A261;
+  --color-olive: #E9C46A;
+  --color-deep-wine: #4A3628;
+  --color-gold: #F2CC8F;
+  --color-rose: #FDDCB5;
+  --color-lavender: #E0C8A8;
+  --color-blush: #FFF0E1;
+}
+
+/* Палитра: Mare — морская, бирюзовая */
+:root[data-palette="mare"] {
+  --color-italia-green: #5AAFB0;
+  --color-italia-red: #7EB8C9;
+  --color-italia-white: #F0F7F8;
+  --color-warm-cream: #EDF5F6;
+  --color-terracotta: #65BEB4;
+  --color-olive: #9DD5D1;
+  --color-deep-wine: #1B3A4B;
+  --color-gold: #C9DBAA;
+  --color-rose: #D2EAE6;
+  --color-lavender: #A8C8D8;
+  --color-blush: #E4F2F0;
+}
+
+/* Палитра: Giardino — мятный сад, лавандовый */
+:root[data-palette="giardino"] {
+  --color-italia-green: #7DB88B;
+  --color-italia-red: #C9A0C9;
+  --color-italia-white: #F4F7F2;
+  --color-warm-cream: #F2F6EF;
+  --color-terracotta: #A3C9A8;
+  --color-olive: #B8D4A3;
+  --color-deep-wine: #2D4233;
+  --color-gold: #D4D09C;
+  --color-rose: #DDD4E8;
+  --color-lavender: #C5B8D8;
+  --color-blush: #ECF0E6;
+}
+
+/* Палитра: Viola — фиалковая, нежная лаванда */
+:root[data-palette="viola"] {
+  --color-italia-green: #9A8FBF;
+  --color-italia-red: #C9A0D3;
+  --color-italia-white: #F8F5FC;
+  --color-warm-cream: #F5F0FA;
+  --color-terracotta: #B088C4;
+  --color-olive: #C4B3DE;
+  --color-deep-wine: #3B2D4A;
+  --color-gold: #D4C4A8;
+  --color-rose: #E8D6F0;
+  --color-lavender: #C9B8E8;
+  --color-blush: #F0EAF6;
+}
+
+/* Палитра: Peonia — dusty rose + digital lavender */
+:root[data-palette="peonia"] {
+  --color-italia-green: #C48BA8;
+  --color-italia-red: #D4A0C4;
+  --color-italia-white: #FDF5F8;
+  --color-warm-cream: #FBF0F4;
+  --color-terracotta: #C46B8E;
+  --color-olive: #C8B0D8;
+  --color-deep-wine: #3D2040;
+  --color-gold: #D4B0C0;
+  --color-rose: #F5D0E0;
+  --color-lavender: #B8A0D0;
+  --color-blush: #FAE8F0;
+}
+
+/* Палитра: Sole — тёплый мёд + лиловые акценты */
+:root[data-palette="sole"] {
+  --color-italia-green: #C8A858;
+  --color-italia-red: #D0A8C4;
+  --color-italia-white: #FEFDF5;
+  --color-warm-cream: #FDF9EC;
+  --color-terracotta: #C49838;
+  --color-olive: #D8C8A0;
+  --color-deep-wine: #3D3520;
+  --color-gold: #D8B860;
+  --color-rose: #F5ECCC;
+  --color-lavender: #C0A8D0;
+  --color-blush: #FAF5E0;
+}
+
+/* Палитра: Glicine — ягодная фуксия + индиго */
+:root[data-palette="glicine"] {
+  --color-italia-green: #A878B8;
+  --color-italia-red: #C888B8;
+  --color-italia-white: #F8F4FC;
+  --color-warm-cream: #F4F0F9;
+  --color-terracotta: #A060A8;
+  --color-olive: #C0A0D0;
+  --color-deep-wine: #2D1E40;
+  --color-gold: #D0B8A8;
+  --color-rose: #E0D0F0;
+  --color-lavender: #B090C8;
+  --color-blush: #F0E8F8;
+}
+
+/* Палитра: Farfalla — розовый + мятный + золотой + лаванда */
+:root[data-palette="farfalla"] {
+  --color-italia-green: #6DBFA8;
+  --color-italia-red: #D87C9E;
+  --color-italia-white: #FBF8F5;
+  --color-warm-cream: #F9F5F2;
+  --color-terracotta: #D86888;
+  --color-olive: #7DD4B8;
+  --color-deep-wine: #3A2838;
+  --color-gold: #D4B060;
+  --color-rose: #F0D0DC;
+  --color-lavender: #B098D0;
+  --color-blush: #F8EDF2;
+}
+
+/* Палитра: Aurora — коралл + бирюза + лимон + сирень */
+:root[data-palette="aurora"] {
+  --color-italia-green: #50B8B0;
+  --color-italia-red: #E08070;
+  --color-italia-white: #FDFAF6;
+  --color-warm-cream: #FAF7F0;
+  --color-terracotta: #E07060;
+  --color-olive: #58C8B8;
+  --color-deep-wine: #382830;
+  --color-gold: #E0CC58;
+  --color-rose: #F8D8D0;
+  --color-lavender: #C8A0D8;
+  --color-blush: #FBF0EC;
+}
+
+/* Палитра: Confetti — фуксия + бирюза + мёд + индиго */
+:root[data-palette="confetti"] {
+  --color-italia-green: #48B0A8;
+  --color-italia-red: #D0508C;
+  --color-italia-white: #F8F5FA;
+  --color-warm-cream: #F5F2F8;
+  --color-terracotta: #D04880;
+  --color-olive: #50C0B0;
+  --color-deep-wine: #281838;
+  --color-gold: #D8B048;
+  --color-rose: #F0C8E0;
+  --color-lavender: #7868B8;
+  --color-blush: #F4EAF8;
+}
+
+/* Палитра: Basilico — изумрудный акцент + розовый коралл */
+:root[data-palette="basilico"] {
+  --color-italia-green: #D87890;
+  --color-italia-red: #D87890;
+  --color-italia-white: #F5F9F6;
+  --color-warm-cream: #F0F7F2;
+  --color-terracotta: #3B9B78;
+  --color-olive: #D88090;
+  --color-deep-wine: #1E3830;
+  --color-gold: #D4B860;
+  --color-rose: #E8C8D0;
+  --color-lavender: #C898B0;
+  --color-blush: #EEF6F0;
+}
+
+/* ==========================================
+   Переключатель палитр
+   ========================================== */
+.palette-switcher {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 8px 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.palette-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.palette-btn:hover {
+  transform: scale(1.15);
+}
+
+.palette-btn.active {
+  border-color: var(--color-deep-wine);
+  box-shadow: 0 0 0 2px rgba(107, 76, 90, 0.2);
+}
+
+/* Два полукруга для отображения цветов палитры */
+.palette-btn::before,
+.palette-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+.palette-btn::before { left: 0; }
+.palette-btn::after { right: 0; }
+
+.palette-btn[data-palette="riviera"]::before { background: #E8A090; }
+.palette-btn[data-palette="riviera"]::after { background: #A3CCBA; }
+.palette-btn[data-palette="velvet"]::before { background: #DDA8A0; }
+.palette-btn[data-palette="velvet"]::after { background: #C5B8CC; }
+.palette-btn[data-palette="rosa-neon"]::before { background: #ff006a; }
+.palette-btn[data-palette="rosa-neon"]::after { background: #94c64f; }
+.palette-btn[data-palette="tramonto"]::before { background: #F4A261; }
+.palette-btn[data-palette="tramonto"]::after { background: #E8856B; }
+.palette-btn[data-palette="mare"]::before { background: #65BEB4; }
+.palette-btn[data-palette="mare"]::after { background: #A8C8D8; }
+.palette-btn[data-palette="giardino"]::before { background: #A3C9A8; }
+.palette-btn[data-palette="giardino"]::after { background: #C5B8D8; }
+.palette-btn[data-palette="viola"]::before { background: #B088C4; }
+.palette-btn[data-palette="viola"]::after { background: #C9B8E8; }
+.palette-btn[data-palette="peonia"]::before { background: #C46B8E; }
+.palette-btn[data-palette="peonia"]::after { background: #B8A0D0; }
+.palette-btn[data-palette="sole"]::before { background: #D8B860; }
+.palette-btn[data-palette="sole"]::after { background: #C0A8D0; }
+.palette-btn[data-palette="glicine"]::before { background: #A060A8; }
+.palette-btn[data-palette="glicine"]::after { background: #C888B8; }
+.palette-btn[data-palette="farfalla"]::before { background: #D86888; }
+.palette-btn[data-palette="farfalla"]::after { background: #7DD4B8; }
+.palette-btn[data-palette="aurora"]::before { background: #E07060; }
+.palette-btn[data-palette="aurora"]::after { background: #58C8B8; }
+.palette-btn[data-palette="confetti"]::before { background: #D04880; }
+.palette-btn[data-palette="confetti"]::after { background: #50C0B0; }
+.palette-btn[data-palette="basilico"]::before { background: #3B9B78; }
+.palette-btn[data-palette="basilico"]::after { background: #D88090; }
+
+
+.palette-label {
+  font-size: 11px;
+  color: #888;
+  align-self: center;
+  font-family: 'Inter', sans-serif;
+  padding-right: 4px;
+}
+
+/* ==========================================
+   Базовые стили
+   ========================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-warm-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-terracotta);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-deep-wine);
+}
+
+/* Выделение текста */
+::selection {
+  background: var(--color-terracotta);
+  color: white;
+}
+
+/* ==========================================
+   Хедер
+   ========================================== */
+#header {
+  background: color-mix(in srgb, var(--color-warm-cream) 50%, transparent);
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#header.scrolled {
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================
+   Плавающая кнопка «Связаться»
+   ========================================== */
+.floating-contact-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background: var(--color-terracotta);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  transition: all 0.3s ease;
+  animation: floating-btn-pulse 3s ease-in-out infinite;
+}
+
+.floating-contact-btn:hover {
+  background: var(--color-deep-wine);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.floating-contact-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+@keyframes floating-btn-pulse {
+  0%, 100% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18),
+                0 0 0 8px color-mix(in srgb, var(--color-terracotta) 20%, transparent);
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-contact-btn {
+    bottom: 16px;
+    left: 16px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   Mesh-gradient фон (soft blur)
+   ========================================== */
+.mesh-gradient {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.gradient-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  will-change: transform;
+}
+
+.gradient-blob--1 {
+  width: 500px;
+  height: 500px;
+  background: var(--color-terracotta);
+  top: -10%;
+  right: -5%;
+  animation: blob-float-1 18s ease-in-out infinite;
+}
+
+.gradient-blob--2 {
+  width: 400px;
+  height: 400px;
+  background: var(--color-olive);
+  bottom: -10%;
+  left: -5%;
+  animation: blob-float-2 22s ease-in-out infinite;
+}
+
+.gradient-blob--3 {
+  width: 350px;
+  height: 350px;
+  background: var(--color-gold);
+  top: 40%;
+  left: 30%;
+  animation: blob-float-3 20s ease-in-out infinite;
+}
+
+.gradient-blob--4 {
+  width: 300px;
+  height: 300px;
+  background: var(--color-lavender);
+  top: 10%;
+  left: 50%;
+  opacity: 0.15;
+  animation: blob-float-1 25s ease-in-out infinite reverse;
+}
+
+@keyframes blob-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes blob-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-30px, 30px) scale(1.05); }
+  66% { transform: translate(20px, -20px) scale(0.95); }
+}
+
+@keyframes blob-float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, 30px) scale(1.08); }
+  66% { transform: translate(-30px, -20px) scale(0.95); }
+}
+
+/* ==========================================
+   Hero — центрированная типографика
+   ========================================== */
+.hero-centered {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--color-deep-wine);
+}
+
+.hero-title .accent {
+  color: var(--color-terracotta);
+  font-style: italic;
+}
+
+/* Декоративная иконка-разделитель */
+.hero-icon {
+  color: var(--color-terracotta);
+  opacity: 0.35;
+  width: 140px;
+  height: auto;
+  margin-bottom: 1.25rem;
+  animation: hero-icon-fade 1.5s ease-out 0.3s both;
+  perspective: 600px;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.hero-icon svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes hero-icon-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  color: color-mix(in srgb, var(--color-deep-wine) 55%, transparent);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+  font-weight: 300;
+}
+
+.hero-subtitle strong {
+  color: var(--color-deep-wine);
+}
+
+/* CTA кнопки hero */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+/* Статистика hero — стеклянные карточки */
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.stat-glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1.25rem;
+  padding: 1.25rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-glass:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.stat-glass__value {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-deep-wine);
+  line-height: 1.2;
+}
+
+.stat-glass__label {
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+/* ==========================================
+   Общие элементы
+   ========================================== */
+
+/* Градиентный текст */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-terracotta), var(--color-deep-wine));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Плавающая анимация для карточек */
+.floating-card {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ==========================================
+   Кнопки
+   ========================================== */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+/* ==========================================
+   Карточки — hover-эффекты
+   ========================================== */
+.advantage-card,
+.pricing-card,
+.team-card {
+  transition: all 0.3s ease;
+}
+
+.advantage-card:hover,
+.pricing-card:hover,
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ==========================================
+   FAQ аккордеон
+   GSAP полностью управляет height, opacity, padding и rotation.
+   CSS не должен задавать transition/max-height/transform для этих свойств,
+   иначе возникает конфликт (двойная интерполяция → рывок в конце).
+   ========================================== */
+.faq-content {
+  overflow: hidden;
+}
+
+/* ==========================================
+   Формы
+   ========================================== */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-terracotta) 30%, transparent);
+}
+
+/* ==========================================
+   Hero-декоративные элементы (legacy)
+   ========================================== */
+.hero-decoration {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Stat items animation (legacy) */
+.stat-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stat-item.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+/* ==========================================
+   Pricing
+   ========================================== */
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Блок с ценой и кнопкой — всегда внизу */
+.pricing-footer {
+  margin-top: auto;
+}
+
+/* Единая акцентная полоска в верхней части карточки */
+.pricing-card__accent {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--color-terracotta) 70%, white),
+    color-mix(in srgb, var(--color-terracotta) 40%, var(--color-gold))
+  );
+}
+
+/* Бейджи уровня курса */
+.course-badge {
+  --badge-bg: color-mix(in srgb, var(--color-terracotta) 12%, transparent);
+  --badge-color: var(--color-terracotta);
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.course-badge--green {
+  --badge-bg: color-mix(in srgb, var(--color-italia-green) 12%, transparent);
+  --badge-color: var(--color-italia-green);
+}
+
+.course-badge--terracotta {
+  --badge-bg: color-mix(in srgb, var(--color-terracotta) 12%, transparent);
+  --badge-color: var(--color-terracotta);
+}
+
+.course-badge--gold {
+  --badge-bg: color-mix(in srgb, var(--color-gold) 15%, transparent);
+  --badge-color: var(--color-gold);
+}
+
+.course-badge--olive {
+  --badge-bg: color-mix(in srgb, var(--color-olive) 12%, transparent);
+  --badge-color: var(--color-olive);
+}
+
+.course-badge--wine {
+  --badge-bg: color-mix(in srgb, var(--color-deep-wine) 12%, transparent);
+  --badge-color: var(--color-deep-wine);
+}
+
+
+
+/* ==========================================
+   Категории курсов
+   ========================================== */
+.course-category {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-category__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.course-category__label {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-deep-wine);
+}
+
+.course-category__desc {
+  font-size: 0.9rem;
+  color: #888;
+  margin-left: 0.25rem;
+}
+
+.course-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-lavender), transparent);
+  margin: 3rem 0;
+}
+
+/* ==========================================
+   Team
+   ========================================== */
+.team-card .aspect-\[4\/3\] {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card .aspect-\[4\/3\]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, color-mix(in srgb, var(--color-warm-cream) 80%, transparent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.team-card:hover .aspect-\[4\/3\]::after {
+  opacity: 1;
+}
+
+/* ==========================================
+   Reviews — галерея скриншотов
+   ========================================== */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.review-screenshot {
+  margin: 0;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s ease;
+}
+
+.review-screenshot:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+}
+
+.review-screenshot__img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.review-screenshot__img-wrap img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.review-screenshot:hover .review-screenshot__img-wrap img {
+  transform: scale(1.03);
+}
+
+/* Shimmer-плейсхолдер для скриншотов */
+.review-screenshot__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  aspect-ratio: 9 / 16;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-terracotta) 6%, var(--color-warm-cream)),
+    color-mix(in srgb, var(--color-olive) 6%, var(--color-warm-cream)),
+    color-mix(in srgb, var(--color-lavender) 6%, var(--color-warm-cream))
+  );
+  background-size: 200% 200%;
+  animation: placeholder-shift 8s ease-in-out infinite;
+  color: color-mix(in srgb, var(--color-deep-wine) 30%, transparent);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@keyframes placeholder-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ==========================================
+   Lightbox — просмотр скриншота
+   ========================================== */
+.review-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.review-lightbox.active {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.review-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: opacity 0.3s ease;
+}
+
+.review-lightbox.active .review-lightbox__backdrop {
+  opacity: 1;
+}
+
+.review-lightbox__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 85vh;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+/* Контейнер для изображения с заблюренным фоном */
+.review-lightbox__img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: scale(0.92);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity 0.3s ease;
+}
+
+.review-lightbox.active .review-lightbox__img-container {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Заблюренный фон — та же картинка, размытая */
+.review-lightbox__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(30px) brightness(0.6);
+  transform: scale(1.15);
+  z-index: 0;
+}
+
+.review-lightbox__img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.review-lightbox__close {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  z-index: 10;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.review-lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.review-lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.review-lightbox__nav:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.review-lightbox__nav--prev {
+  left: -4rem;
+}
+
+.review-lightbox__nav--next {
+  right: -4rem;
+}
+
+/* ==========================================
+   Мобильное меню
+   ========================================== */
+#mobile-menu {
+  transform-origin: top;
+  transition: all 0.3s ease;
+}
+
+#mobile-menu.hidden {
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+#mobile-menu:not(.hidden) {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+/* ==========================================
+   Лоадер
+   ========================================== */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-warm-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition:
+    opacity 0.5s,
+    visibility 0.5s;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid color-mix(in srgb, var(--color-terracotta) 20%, transparent);
+  border-top-color: var(--color-terracotta);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ==========================================
+   Адаптив
+   ========================================== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .floating-card {
+    display: none;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .review-lightbox__nav {
+    display: none;
+  }
+
+  .hero-stats {
+    gap: 0.75rem;
+  }
+
+  .stat-glass {
+    padding: 1rem 1.25rem;
+  }
+
+  .gradient-blob {
+    filter: blur(80px);
+    opacity: 0.25;
+  }
+
+  .palette-switcher {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .hero-icon {
+    width: 90px;
+  }
+}
+
+/* ==========================================
+   Анимации появления секций
+   ========================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger delays */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* ==========================================
+   Pulse CTA
+   ========================================== */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-deep-wine) 40%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 0 15px transparent;
+  }
+}
+
+/* ==========================================
+   Контактные карточки — glassmorphism
+   ========================================== */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.35s ease;
+}
+
+.contact-card:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: all 0.35s ease;
+}
+
+.contact-card:hover .contact-card__icon {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+
+.contact-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.contact-card__hint {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* ==========================================
+   Форма — success state
+   ========================================== */
+.form-success {
+  background: linear-gradient(135deg, var(--color-terracotta), var(--color-deep-wine));
+  color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+
+.form-success i {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+/* ==========================================
+   Image placeholder shimmer
+   ========================================== */
+.image-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Плавный переход при смене палитры */
+* {
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0s;
+}
+
+:root[data-palette-transition] * {
+  transition-duration: 0.5s;
+}
+
+/* ==========================================
+   Модальные окна курсов
+   ========================================== */
+.course-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.course-modal.active {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.course-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: opacity 0.3s ease;
+}
+
+.course-modal.active .course-modal__backdrop {
+  opacity: 1;
+}
+
+.course-modal__container {
+  position: relative;
+  width: 90%;
+  max-width: 560px;
+  max-height: 85vh;
+  background: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity 0.3s ease;
+}
+
+.course-modal.active .course-modal__container {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.course-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.course-modal__close:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.course-modal__header {
+  padding: 2rem 2rem 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-terracotta), color-mix(in srgb, var(--color-deep-wine) 55%, var(--color-terracotta)));
+}
+
+.course-modal__badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.course-modal__title {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.course-modal__subtitle {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.course-modal__body {
+  padding: 1.5rem 2rem 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.course-modal__price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0ece8;
+}
+
+.course-modal__price {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-deep-wine);
+}
+
+.course-modal__duration {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.course-modal__section-title {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-deep-wine);
+  margin: 1.25rem 0 0.75rem;
+}
+
+.course-modal__desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #555;
+}
+
+.course-modal__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-modal__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  font-size: 0.92rem;
+  color: #444;
+}
+
+.course-modal__features li i,
+.course-modal__features li svg {
+  flex-shrink: 0;
+  color: var(--color-italia-green);
+  margin-top: 0.1rem;
+}
+
+/* Футер модалки — фиксированная кнопка внизу */
+.course-modal__footer {
+  flex-shrink: 0;
+  padding: 1rem 2rem 1.5rem;
+  background: #fff;
+  border-top: 1px solid #f0ece8;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.course-modal__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.85rem 2rem;
+  background: linear-gradient(135deg, var(--color-terracotta), var(--color-italia-red));
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.course-modal__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Мобильная адаптация модалок */
+@media (max-width: 640px) {
+  .course-modal__container {
+    width: 95%;
+    max-height: 90vh;
+    border-radius: 1rem;
+  }
+
+  .course-modal__header {
+    padding: 1.5rem 1.25rem 1rem;
+  }
+
+  .course-modal__title {
+    font-size: 1.35rem;
+  }
+
+  .course-modal__body {
+    padding: 1.25rem 1.25rem 1.25rem;
+  }
+
+  .course-modal__footer {
+    padding: 0.75rem 1.25rem 1rem;
+  }
+
+  .course-modal__price {
+    font-size: 1.4rem;
+  }
+}
+
+/* ==========================================
+   Сертификаты — сетка и карточки
+   ========================================== */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.certificate-card {
+  margin: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--color-warm-cream, #faf5ef);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.certificate-card__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.certificate-card__caption {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--color-deep-wine, #4a2c2a);
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+@media (max-width: 480px) {
+  .certificate-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .certificate-card__img {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Галерея отзывов — мобильная адаптация <=480px */
+@media (max-width: 480px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   АНИМАЦИИ И ЭФФЕКТЫ
+   ========================================== */
+
+/* 9. Scroll Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-terracotta);
+  transform-origin: left center;
+  transform: scaleX(0);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* 8. Glow Overlay */
+.glow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(
+    300px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    rgba(196, 122, 106, 0.12),
+    transparent 60%
+  );
+  border-radius: inherit;
+  z-index: 1;
+}
+
+/* 1. SVG Dividers */
+.svg-divider {
+  width: 100%;
+  height: 60px;
+  overflow: visible;
+  position: relative;
+  z-index: 5;
+  margin: -1px 0;
+}
+
+.svg-divider path {
+  fill: none;
+  stroke: var(--color-terracotta);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.35;
+}
+
+
+
+/* 15. Particles Canvas */
+.particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 7. Slot Counter */
+.slot-counter-wrap {
+  display: inline-flex;
+  overflow: hidden;
+  height: 1.2em;
+  vertical-align: bottom;
+}
+
+.slot-digit-col {
+  display: inline-block;
+  line-height: 1.2em;
+}
+
+/* Reveal-word overflow fix */
+.reveal-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
