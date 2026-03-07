@@ -358,7 +358,9 @@ html {
 .floating-contact-btn {
   position: fixed;
   bottom: 24px;
-  left: 24px;
+  /* Привязка к контентной зоне: на широких экранах кнопка не уходит
+     левее контейнера (1536px = Tailwind 2xl breakpoint) */
+  left: max(24px, calc((100vw - 1536px) / 2 + 24px));
   z-index: 100;
   display: flex;
   align-items: center;
@@ -862,6 +864,57 @@ textarea:focus {
   gap: 1.25rem;
 }
 
+/* Скрываем отзывы начиная с 7-го */
+.reviews-grid .review-screenshot:nth-child(n+7) {
+  display: none;
+}
+
+.reviews-grid--expanded .review-screenshot:nth-child(n+7) {
+  display: block;
+}
+
+/* Кнопка «Показать ещё / Скрыть» */
+.reviews-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.reviews-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  color: var(--color-deep-wine);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.reviews-toggle-btn:hover {
+  background: var(--color-terracotta);
+  color: #fff;
+  border-color: var(--color-terracotta);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.reviews-toggle-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.reviews-toggle-btn--expanded svg {
+  transform: rotate(180deg);
+}
+
 .review-screenshot {
   margin: 0;
   border-radius: 1.25rem;
@@ -1134,6 +1187,15 @@ textarea:focus {
     gap: 1rem;
   }
 
+  /* На мобильном — показываем первые 4 отзыва (2 ряда по 2) */
+  .reviews-grid .review-screenshot:nth-child(n+5) {
+    display: none;
+  }
+
+  .reviews-grid--expanded .review-screenshot:nth-child(n+5) {
+    display: block;
+  }
+
   .review-lightbox__nav {
     display: none;
   }
@@ -1267,13 +1329,12 @@ textarea:focus {
   font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 0.35rem;
 }
 
-.contact-card__hint {
+/* .contact-card__hint {
   font-size: 0.85rem;
   opacity: 0.7;
-}
+} */
 
 /* ==========================================
    Форма — success state

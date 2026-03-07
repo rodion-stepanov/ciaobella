@@ -30,9 +30,10 @@ export function initSvgDrawLines() {
       strokeDashoffset: 0,
       scrollTrigger: {
         trigger: path.closest(".svg-divider"),
-        start: "top 85%",
-        end: "bottom 40%",
+        start: "top 90%",
+        end: "top 30%",
         scrub: 1,
+        invalidateOnRefresh: true,
       },
       ease: "none",
     });
@@ -363,8 +364,9 @@ export function initEnhancedFaq() {
     content.classList.remove("hidden");
 
     // Начальное состояние — контент скрыт через height: 0
+    // Padding НЕ анимируем — overflow: hidden скрывает его при height: 0
     if (!item.classList.contains("active")) {
-      gsap.set(content, { height: 0, opacity: 0, padding: 0 });
+      gsap.set(content, { height: 0, opacity: 0 });
     } else {
       gsap.set(content, { height: "auto", opacity: 1 });
     }
@@ -381,7 +383,6 @@ export function initEnhancedFaq() {
         gsap.to(content, {
           height: 0,
           opacity: 0,
-          padding: 0,
           duration: 0.35,
           ease: "power2.inOut",
         });
@@ -397,13 +398,17 @@ export function initEnhancedFaq() {
         // Открытие
         gsap.fromTo(
           content,
-          { height: 0, opacity: 0, padding: 0 },
+          { height: 0, opacity: 0 },
           {
             height: "auto",
             opacity: 1,
-            padding: "",
             duration: 0.4,
             ease: "power2.out",
+            // После анимации сбрасываем inline height,
+            // чтобы элемент сам занимал нужную высоту
+            onComplete: () => {
+              gsap.set(content, { clearProps: "height" });
+            },
           },
         );
         if (icon) {

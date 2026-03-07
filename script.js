@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Lightbox для отзывов
   initReviewLightbox();
 
+  // Кнопка «Показать ещё / Скрыть» для отзывов
+  initReviewsToggle();
+
   // Mobile menu toggle
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
@@ -633,5 +636,66 @@ function initReviewLightbox() {
     if (e.key === "Escape") closeLightbox();
     if (e.key === "ArrowLeft") showPrev();
     if (e.key === "ArrowRight") showNext();
+  });
+}
+
+// ==========================================
+// Кнопка «Показать ещё / Скрыть» для отзывов
+// ==========================================
+function initReviewsToggle() {
+  const btn = document.getElementById("reviews-toggle");
+  const grid = document.querySelector(".reviews-grid");
+  if (!btn || !grid) return;
+
+  const textEl = btn.querySelector(".reviews-toggle-btn__text");
+  let expanded = false;
+
+  btn.addEventListener("click", () => {
+    expanded = !expanded;
+
+    if (expanded) {
+      // Раскрыть
+      grid.classList.add("reviews-grid--expanded");
+      btn.classList.add("reviews-toggle-btn--expanded");
+      if (textEl) textEl.textContent = "Скрыть";
+
+      // GSAP-анимация появления скрытых карточек
+      const hiddenCards = grid.querySelectorAll(
+        ".review-screenshot:nth-child(n+7)",
+      );
+      if (hiddenCards.length) {
+        gsap.fromTo(
+          hiddenCards,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power3.out",
+          },
+        );
+      }
+
+      // Обновить ScrollTrigger
+      ScrollTrigger.refresh();
+    } else {
+      // Свернуть
+      grid.classList.remove("reviews-grid--expanded");
+      btn.classList.remove("reviews-toggle-btn--expanded");
+      if (textEl) textEl.textContent = "Показать ещё";
+
+      // Scroll к секции отзывов
+      const section = document.getElementById("reviews");
+      if (section) {
+        const headerH = document.getElementById("header")?.offsetHeight || 0;
+        window.scrollTo({
+          top: section.offsetTop - headerH,
+          behavior: "smooth",
+        });
+      }
+
+      ScrollTrigger.refresh();
+    }
   });
 }
