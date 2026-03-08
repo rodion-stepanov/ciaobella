@@ -3,6 +3,7 @@ import { createHtmlPlugin } from "vite-plugin-html";
 import path from "path";
 
 export default defineConfig({
+  base: "/ciaobella/",
   plugins: [
     createHtmlPlugin({
       minify: true,
