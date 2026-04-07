@@ -726,21 +726,6 @@ textarea:focus {
 /* ==========================================
    Pricing
    ========================================== */
-.pricing-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.pricing-card > div:last-child {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-/* Блок с ценой и кнопкой — всегда внизу */
-.pricing-footer {
-  margin-top: auto;
-}
 
 /* Единая акцентная полоска в верхней части карточки */
 .pricing-card__accent {
