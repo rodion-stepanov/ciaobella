@@ -1,7 +1,7 @@
 {
   "name": "ciaobella",
   "version": "1.0.0",
-  "description": "Ciaobella — школа итальянского языка",
+  "description": "Привет, Белла!, Ciao, Bella!, Ciaobella — школа итальянского языка",
   "type": "module",
   "scripts": {
     "dev": "vite",
