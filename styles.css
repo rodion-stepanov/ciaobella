@@ -1,162 +1,27 @@
-/* styles.css — Привет, Белла! */
+@import "tailwindcss";
 
+@theme {
+  --color-italia-green: var(--color-italia-green);
+  --color-italia-red: var(--color-italia-red);
+  --color-warm-cream: var(--color-warm-cream);
+  --color-terracotta: var(--color-terracotta);
+  --color-olive: var(--color-olive);
+  --color-deep-wine: var(--color-deep-wine);
+  --color-gold: var(--color-gold);
+  --color-lavender: var(--color-lavender);
+  
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* styles.css — Привет, Белла! */
 /* ==========================================
    Цветовые палитры
-   Палитра «Итальянская Ривьера» — основная
-   Палитра «Венецианский бархат» — альтернативная
+   Активная палитра — Farfalla (розовый + мятный + золотой + лаванда).
+   Остальные палитры сохранены ниже в комментариях как справочник.
    ========================================== */
 :root {
-  /* Палитра: Итальянская Ривьера — лёгкая, воздушная */
-  --color-italia-green: #4D8A7F;
-  --color-italia-red: #C46B5A;
-  --color-italia-white: #F7F5F2;
-  --color-warm-cream: #FDFAF7;
-  --color-terracotta: #C47A6A;
-  --color-olive: #7AB5A0;
-  --color-deep-wine: #3D2E35;
-  --color-gold: #C9A96E;
-  --color-rose: #F5DDB6;
-  --color-lavender: #A89BBB;
-  --color-blush: #F9F0EA;
-}
-
-/* Альтернативная палитра: Венецианский бархат — нежная, тёплая */
-:root[data-palette="velvet"] {
-  --color-italia-green: #6D9468;
-  --color-italia-red: #B86B63;
-  --color-italia-white: #F9F6F4;
-  --color-warm-cream: #FDF9F6;
-  --color-terracotta: #B87A72;
-  --color-olive: #8FB282;
-  --color-deep-wine: #4A2F3D;
-  --color-gold: #B89E6A;
-  --color-rose: #F0C9C7;
-  --color-lavender: #A89BAF;
-  --color-blush: #F6EBE6;
-}
-
-/* Палитра: Rosa Neon — яркая, контрастная */
-:root[data-palette="rosa-neon"] {
-  --color-italia-green: #94c64f;
-  --color-italia-red: #ff006a;
-  --color-italia-white: #eeeeee;
-  --color-warm-cream: #F5F3F4;
-  --color-terracotta: #ff3d85;
-  --color-olive: #a8d965;
-  --color-deep-wine: #352c31;
-  --color-gold: #E8CC6E;
-  --color-rose: #FFD6E5;
-  --color-lavender: #D4B8D9;
-  --color-blush: #FBE8EE;
-}
-
-/* Палитра: Tramonto — тёплый закат, персиковый */
-:root[data-palette="tramonto"] {
-  --color-italia-green: #C9A96E;
-  --color-italia-red: #E8856B;
-  --color-italia-white: #FFF8F2;
-  --color-warm-cream: #FFF5ED;
-  --color-terracotta: #F4A261;
-  --color-olive: #E9C46A;
-  --color-deep-wine: #4A3628;
-  --color-gold: #F2CC8F;
-  --color-rose: #FDDCB5;
-  --color-lavender: #E0C8A8;
-  --color-blush: #FFF0E1;
-}
-
-/* Палитра: Mare — морская, бирюзовая */
-:root[data-palette="mare"] {
-  --color-italia-green: #5AAFB0;
-  --color-italia-red: #7EB8C9;
-  --color-italia-white: #F0F7F8;
-  --color-warm-cream: #EDF5F6;
-  --color-terracotta: #65BEB4;
-  --color-olive: #9DD5D1;
-  --color-deep-wine: #1B3A4B;
-  --color-gold: #C9DBAA;
-  --color-rose: #D2EAE6;
-  --color-lavender: #A8C8D8;
-  --color-blush: #E4F2F0;
-}
-
-/* Палитра: Giardino — мятный сад, лавандовый */
-:root[data-palette="giardino"] {
-  --color-italia-green: #7DB88B;
-  --color-italia-red: #C9A0C9;
-  --color-italia-white: #F4F7F2;
-  --color-warm-cream: #F2F6EF;
-  --color-terracotta: #A3C9A8;
-  --color-olive: #B8D4A3;
-  --color-deep-wine: #2D4233;
-  --color-gold: #D4D09C;
-  --color-rose: #DDD4E8;
-  --color-lavender: #C5B8D8;
-  --color-blush: #ECF0E6;
-}
-
-/* Палитра: Viola — фиалковая, нежная лаванда */
-:root[data-palette="viola"] {
-  --color-italia-green: #9A8FBF;
-  --color-italia-red: #C9A0D3;
-  --color-italia-white: #F8F5FC;
-  --color-warm-cream: #F5F0FA;
-  --color-terracotta: #B088C4;
-  --color-olive: #C4B3DE;
-  --color-deep-wine: #3B2D4A;
-  --color-gold: #D4C4A8;
-  --color-rose: #E8D6F0;
-  --color-lavender: #C9B8E8;
-  --color-blush: #F0EAF6;
-}
-
-/* Палитра: Peonia — dusty rose + digital lavender */
-:root[data-palette="peonia"] {
-  --color-italia-green: #C48BA8;
-  --color-italia-red: #D4A0C4;
-  --color-italia-white: #FDF5F8;
-  --color-warm-cream: #FBF0F4;
-  --color-terracotta: #C46B8E;
-  --color-olive: #C8B0D8;
-  --color-deep-wine: #3D2040;
-  --color-gold: #D4B0C0;
-  --color-rose: #F5D0E0;
-  --color-lavender: #B8A0D0;
-  --color-blush: #FAE8F0;
-}
-
-/* Палитра: Sole — тёплый мёд + лиловые акценты */
-:root[data-palette="sole"] {
-  --color-italia-green: #C8A858;
-  --color-italia-red: #D0A8C4;
-  --color-italia-white: #FEFDF5;
-  --color-warm-cream: #FDF9EC;
-  --color-terracotta: #C49838;
-  --color-olive: #D8C8A0;
-  --color-deep-wine: #3D3520;
-  --color-gold: #D8B860;
-  --color-rose: #F5ECCC;
-  --color-lavender: #C0A8D0;
-  --color-blush: #FAF5E0;
-}
-
-/* Палитра: Glicine — ягодная фуксия + индиго */
-:root[data-palette="glicine"] {
-  --color-italia-green: #A878B8;
-  --color-italia-red: #C888B8;
-  --color-italia-white: #F8F4FC;
-  --color-warm-cream: #F4F0F9;
-  --color-terracotta: #A060A8;
-  --color-olive: #C0A0D0;
-  --color-deep-wine: #2D1E40;
-  --color-gold: #D0B8A8;
-  --color-rose: #E0D0F0;
-  --color-lavender: #B090C8;
-  --color-blush: #F0E8F8;
-}
-
-/* Палитра: Farfalla — розовый + мятный + золотой + лаванда */
-:root[data-palette="farfalla"] {
+  /* Палитра: Farfalla — розовый + мятный + золотой + лаванда */
   --color-italia-green: #6DBFA8;
   --color-italia-red: #D87C9E;
   --color-italia-white: #FBF8F5;
@@ -170,7 +35,184 @@
   --color-blush: #F8EDF2;
 }
 
+/* ------------------------------------------------------------------
+   Архив палитр (закомментированы, оставлены как справочник).
+   Для быстрого превью можно временно раскомментировать нужный блок
+   и добавить <html data-palette="..."> в index.html.
+   ------------------------------------------------------------------ */
+
+/* Палитра: Итальянская Ривьера — лёгкая, воздушная */
+/*
+:root {
+  --color-italia-green: #4D8A7F;
+  --color-italia-red: #C46B5A;
+  --color-italia-white: #F7F5F2;
+  --color-warm-cream: #FDFAF7;
+  --color-terracotta: #C47A6A;
+  --color-olive: #7AB5A0;
+  --color-deep-wine: #3D2E35;
+  --color-gold: #C9A96E;
+  --color-rose: #F5DDB6;
+  --color-lavender: #A89BBB;
+  --color-blush: #F9F0EA;
+}
+*/
+
+/* Альтернативная палитра: Венецианский бархат — нежная, тёплая */
+/*
+:root[data-palette="velvet"] {
+  --color-italia-green: #6D9468;
+  --color-italia-red: #B86B63;
+  --color-italia-white: #F9F6F4;
+  --color-warm-cream: #FDF9F6;
+  --color-terracotta: #B87A72;
+  --color-olive: #8FB282;
+  --color-deep-wine: #4A2F3D;
+  --color-gold: #B89E6A;
+  --color-rose: #F0C9C7;
+  --color-lavender: #A89BAF;
+  --color-blush: #F6EBE6;
+}
+*/
+
+/* Палитра: Rosa Neon — яркая, контрастная */
+/*
+:root[data-palette="rosa-neon"] {
+  --color-italia-green: #94c64f;
+  --color-italia-red: #ff006a;
+  --color-italia-white: #eeeeee;
+  --color-warm-cream: #F5F3F4;
+  --color-terracotta: #ff3d85;
+  --color-olive: #a8d965;
+  --color-deep-wine: #352c31;
+  --color-gold: #E8CC6E;
+  --color-rose: #FFD6E5;
+  --color-lavender: #D4B8D9;
+  --color-blush: #FBE8EE;
+}
+*/
+
+/* Палитра: Tramonto — тёплый закат, персиковый */
+/*
+:root[data-palette="tramonto"] {
+  --color-italia-green: #C9A96E;
+  --color-italia-red: #E8856B;
+  --color-italia-white: #FFF8F2;
+  --color-warm-cream: #FFF5ED;
+  --color-terracotta: #F4A261;
+  --color-olive: #E9C46A;
+  --color-deep-wine: #4A3628;
+  --color-gold: #F2CC8F;
+  --color-rose: #FDDCB5;
+  --color-lavender: #E0C8A8;
+  --color-blush: #FFF0E1;
+}
+*/
+
+/* Палитра: Mare — морская, бирюзовая */
+/*
+:root[data-palette="mare"] {
+  --color-italia-green: #5AAFB0;
+  --color-italia-red: #7EB8C9;
+  --color-italia-white: #F0F7F8;
+  --color-warm-cream: #EDF5F6;
+  --color-terracotta: #65BEB4;
+  --color-olive: #9DD5D1;
+  --color-deep-wine: #1B3A4B;
+  --color-gold: #C9DBAA;
+  --color-rose: #D2EAE6;
+  --color-lavender: #A8C8D8;
+  --color-blush: #E4F2F0;
+}
+*/
+
+/* Палитра: Giardino — мятный сад, лавандовый */
+/*
+:root[data-palette="giardino"] {
+  --color-italia-green: #7DB88B;
+  --color-italia-red: #C9A0C9;
+  --color-italia-white: #F4F7F2;
+  --color-warm-cream: #F2F6EF;
+  --color-terracotta: #A3C9A8;
+  --color-olive: #B8D4A3;
+  --color-deep-wine: #2D4233;
+  --color-gold: #D4D09C;
+  --color-rose: #DDD4E8;
+  --color-lavender: #C5B8D8;
+  --color-blush: #ECF0E6;
+}
+*/
+
+/* Палитра: Viola — фиалковая, нежная лаванда */
+/*
+:root[data-palette="viola"] {
+  --color-italia-green: #9A8FBF;
+  --color-italia-red: #C9A0D3;
+  --color-italia-white: #F8F5FC;
+  --color-warm-cream: #F5F0FA;
+  --color-terracotta: #B088C4;
+  --color-olive: #C4B3DE;
+  --color-deep-wine: #3B2D4A;
+  --color-gold: #D4C4A8;
+  --color-rose: #E8D6F0;
+  --color-lavender: #C9B8E8;
+  --color-blush: #F0EAF6;
+}
+*/
+
+/* Палитра: Peonia — dusty rose + digital lavender */
+/*
+:root[data-palette="peonia"] {
+  --color-italia-green: #C48BA8;
+  --color-italia-red: #D4A0C4;
+  --color-italia-white: #FDF5F8;
+  --color-warm-cream: #FBF0F4;
+  --color-terracotta: #C46B8E;
+  --color-olive: #C8B0D8;
+  --color-deep-wine: #3D2040;
+  --color-gold: #D4B0C0;
+  --color-rose: #F5D0E0;
+  --color-lavender: #B8A0D0;
+  --color-blush: #FAE8F0;
+}
+*/
+
+/* Палитра: Sole — тёплый мёд + лиловые акценты */
+/*
+:root[data-palette="sole"] {
+  --color-italia-green: #C8A858;
+  --color-italia-red: #D0A8C4;
+  --color-italia-white: #FEFDF5;
+  --color-warm-cream: #FDF9EC;
+  --color-terracotta: #C49838;
+  --color-olive: #D8C8A0;
+  --color-deep-wine: #3D3520;
+  --color-gold: #D8B860;
+  --color-rose: #F5ECCC;
+  --color-lavender: #C0A8D0;
+  --color-blush: #FAF5E0;
+}
+*/
+
+/* Палитра: Glicine — ягодная фуксия + индиго */
+/*
+:root[data-palette="glicine"] {
+  --color-italia-green: #A878B8;
+  --color-italia-red: #C888B8;
+  --color-italia-white: #F8F4FC;
+  --color-warm-cream: #F4F0F9;
+  --color-terracotta: #A060A8;
+  --color-olive: #C0A0D0;
+  --color-deep-wine: #2D1E40;
+  --color-gold: #D0B8A8;
+  --color-rose: #E0D0F0;
+  --color-lavender: #B090C8;
+  --color-blush: #F0E8F8;
+}
+*/
+
 /* Палитра: Aurora — коралл + бирюза + лимон + сирень */
+/*
 :root[data-palette="aurora"] {
   --color-italia-green: #50B8B0;
   --color-italia-red: #E08070;
@@ -184,8 +226,10 @@
   --color-lavender: #C8A0D8;
   --color-blush: #FBF0EC;
 }
+*/
 
 /* Палитра: Confetti — фуксия + бирюза + мёд + индиго */
+/*
 :root[data-palette="confetti"] {
   --color-italia-green: #48B0A8;
   --color-italia-red: #D0508C;
@@ -199,8 +243,10 @@
   --color-lavender: #7868B8;
   --color-blush: #F4EAF8;
 }
+*/
 
 /* Палитра: Basilico — изумрудный акцент + розовый коралл */
+/*
 :root[data-palette="basilico"] {
   --color-italia-green: #D87890;
   --color-italia-red: #D87890;
@@ -214,10 +260,14 @@
   --color-lavender: #C898B0;
   --color-blush: #EEF6F0;
 }
+*/
 
 /* ==========================================
-   Переключатель палитр
+   Переключатель палитр (отключён; UI удалён)
+   Стили сохранены в комментарии для возможного
+   возврата функциональности в будущем.
    ========================================== */
+/*
 .palette-switcher {
   position: fixed;
   bottom: 24px;
@@ -254,7 +304,6 @@
   box-shadow: 0 0 0 2px rgba(107, 76, 90, 0.2);
 }
 
-/* Два полукруга для отображения цветов палитры */
 .palette-btn::before,
 .palette-btn::after {
   content: '';
@@ -295,7 +344,6 @@
 .palette-btn[data-palette="basilico"]::before { background: #3B9B78; }
 .palette-btn[data-palette="basilico"]::after { background: #D88090; }
 
-
 .palette-label {
   font-size: 11px;
   color: #888;
@@ -303,12 +351,17 @@
   font-family: 'Inter', sans-serif;
   padding-right: 4px;
 }
+*/
 
 /* ==========================================
    Базовые стили
    ========================================== */
 html {
   scroll-behavior: smooth;
+}
+
+provider-selection-button {
+  display: none !important;
 }
 
 /* Кастомный скроллбар */
@@ -1352,7 +1405,11 @@ textarea:focus {
   100% { background-position: -200% 0; }
 }
 
-/* Плавный переход при смене палитры */
+/* Плавный переход при смене палитры — отключён вместе с переключателем.
+   Побочно это правило глобально обнуляло transition-duration для
+   color/background-color/border-color/box-shadow у всех элементов,
+   поэтому оставляю только комментарий. */
+/*
 * {
   transition-property: color, background-color, border-color, box-shadow;
   transition-duration: 0s;
@@ -1361,6 +1418,7 @@ textarea:focus {
 :root[data-palette-transition] * {
   transition-duration: 0.5s;
 }
+*/
 
 /* ==========================================
    Модальные окна курсов

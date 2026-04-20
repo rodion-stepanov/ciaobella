@@ -7,6 +7,7 @@ import { initAllAnimations } from "./animations.js";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
+  suppressProviderSelectionButton();
   // Set current year
   const yearElement = document.getElementById("current-year");
   if (yearElement) {
@@ -23,9 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
       el.textContent = new Date().getFullYear() - startYear + "+";
     }
   });
-
-  // Переключатель палитр
-  initPaletteSwitcher();
 
   // Модалки курсов
   initCourseModals();
@@ -395,65 +393,27 @@ document.addEventListener("DOMContentLoaded", () => {
   initAllAnimations();
 });
 
-/**
- * Переключатель цветовых палитр
- * Сохраняет выбор в localStorage
- */
-function initPaletteSwitcher() {
-  const buttons = document.querySelectorAll(".palette-btn");
-  const root = document.documentElement;
+function suppressProviderSelectionButton() {
+  const removeButton = () => {
+    const btn = document.querySelector("provider-selection-button");
+    if (!btn) return false;
+    btn.remove();
+    return true;
+  };
 
-  // Все допустимые палитры (кроме riviera — значение по умолчанию)
-  const validPalettes = [
-    "velvet",
-    "rosa-neon",
-    "tramonto",
-    "mare",
-    "giardino",
-    "viola",
-    "peonia",
-    "sole",
-    "glicine",
-    "farfalla",
-    "aurora",
-    "confetti",
-    "basilico",
-  ];
-
-  // Восстановить ранее выбранную палитру
-  const saved = localStorage.getItem("ciaobella-palette");
-  if (saved && validPalettes.includes(saved)) {
-    root.setAttribute("data-palette", saved);
-    buttons.forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.palette === saved);
-    });
+  if (removeButton()) {
+    return;
   }
 
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const palette = btn.dataset.palette;
+  const observer = new MutationObserver((mutations, obs) => {
+    if (removeButton()) {
+      obs.disconnect();
+    }
+  });
 
-      // Добавить transition на время переключения
-      root.setAttribute("data-palette-transition", "");
-
-      if (palette === "riviera") {
-        root.removeAttribute("data-palette");
-      } else {
-        root.setAttribute("data-palette", palette);
-      }
-
-      // Переключить active-класс
-      buttons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      // Сохранить выбор
-      localStorage.setItem("ciaobella-palette", palette);
-
-      // Убрать transition-атрибут после анимации
-      setTimeout(() => {
-        root.removeAttribute("data-palette-transition");
-      }, 600);
-    });
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true,
   });
 }
 

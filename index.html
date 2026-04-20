@@ -17,32 +17,53 @@
       content="Влюбитесь в Италию через её язык. Авторская методика обучения."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ciaobella-italiano.ru/" />
+    <meta property="og:image" content="https://ciaobella-italiano.ru/assets/images/og-image.jpg" />
+    <link rel="canonical" href="https://ciaobella-italiano.ru/" />
     <link rel="icon" href="/assets/images/icon.svg" type="image/svg+xml" />
     <title>Привет, Белла!, Ciao, Bella!, Ciaobella — Школа итальянского языка</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "italia-green": "var(--color-italia-green)",
-              "italia-red": "var(--color-italia-red)",
-              "warm-cream": "var(--color-warm-cream)",
-              terracotta: "var(--color-terracotta)",
-              olive: "var(--color-olive)",
-              "deep-wine": "var(--color-deep-wine)",
-              gold: "var(--color-gold)",
-              lavender: "var(--color-lavender)",
-            },
-            fontFamily: {
-              display: ["Playfair Display", "serif"],
-              body: ["Inter", "sans-serif"],
-            },
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LanguageSchool",
+      "name": "Привет, Белла!",
+      "url": "https://ciaobella-italiano.ru/",
+      "logo": "https://ciaobella-italiano.ru/assets/images/icon.svg",
+      "description": "Школа итальянского языка. Авторская методика, носители языка, погружение в культуру Италии.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://t.me/Elena_ciaobella"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Курсы итальянского языка",
+        "itemListElement": [
+          {
+            "@type": "Course",
+            "name": "С итальянским до луны и обратно",
+            "description": "Базовый курс для начинающих (А1-А2)"
           },
-        },
-      };
+          {
+            "@type": "Course",
+            "name": "С итальянским как в кино",
+            "description": "Продвинутый курс по фильмам и культуре"
+          },
+          {
+            "@type": "Course",
+            "name": "Индивидуально",
+            "description": "Индивидуальные занятия с преподавателем"
+          },
+          {
+            "@type": "Course",
+            "name": "В мини группе",
+            "description": "Занятия в небольших группах до 4 человек"
+          }
+        ]
+      }
+    }
     </script>
 
     <!-- Google Fonts -->
@@ -57,6 +78,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="font-body bg-warm-cream text-gray-800 overflow-x-hidden">
+    <!-- Yandex.Metrika (Analytics) -->
+    <%- include('./components/analytics.html') %>
     <%- include('./components/header.html') %>
 
     <%- include('./components/hero.html') %>
@@ -101,96 +124,6 @@
       </svg>
       Связаться
     </a>
-
-    <!-- Переключатель палитр -->
-    <div class="palette-switcher">
-      <span class="palette-label">Палитра:</span>
-      <button
-        class="palette-btn active"
-        data-palette="riviera"
-        title="Итальянская Ривьера"
-        aria-label="Палитра Итальянская Ривьера"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="velvet"
-        title="Венецианский бархат"
-        aria-label="Палитра Венецианский бархат"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="rosa-neon"
-        title="Rosa Neon"
-        aria-label="Палитра Rosa Neon"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="tramonto"
-        title="Tramonto (Закат)"
-        aria-label="Палитра Tramonto"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="mare"
-        title="Mare (Море)"
-        aria-label="Палитра Mare"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="giardino"
-        title="Giardino (Сад)"
-        aria-label="Палитра Giardino"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="viola"
-        title="Viola (Фиалка)"
-        aria-label="Палитра Viola"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="peonia"
-        title="Peonia (Пион)"
-        aria-label="Палитра Peonia"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="sole"
-        title="Sole (Солнце)"
-        aria-label="Палитра Sole"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="glicine"
-        title="Glicine (Глициния)"
-        aria-label="Палитра Glicine"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="farfalla"
-        title="Farfalla (Бабочка)"
-        aria-label="Палитра Farfalla"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="aurora"
-        title="Aurora (Рассвет)"
-        aria-label="Палитра Aurora"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="confetti"
-        title="Confetti (Конфетти)"
-        aria-label="Палитра Confetti"
-      ></button>
-      <button
-        class="palette-btn"
-        data-palette="basilico"
-        title="Basilico (Базилик)"
-        aria-label="Палитра Basilico"
-      ></button>
-
-    </div>
 
     <!-- Scripts -->
     <script type="module" src="script.js"></script>
