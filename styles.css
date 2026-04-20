@@ -1223,10 +1223,15 @@ textarea:focus {
 
 /* ==========================================
    Адаптив
+   ==========================================
+   Глобальный приём: уменьшаем корневой font-size на мобильных.
+   Все rem-значения (типографика Tailwind + кастомные стили)
+   масштабируются пропорционально - одним правилом вместо десятков точечных.
+   px/vw значения остаются прежними (бордеры, иконки, hero с clamp()).
    ========================================== */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.25rem;
+  html {
+    font-size: 93.75%; /* 15px вместо 16px */
   }
 
   .floating-card {
@@ -1662,6 +1667,28 @@ textarea:focus {
 
   .course-modal__price {
     font-size: 1.4rem;
+  }
+
+  .course-modal__features li {
+    padding: 0.2rem 0;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .course-modal__section-title {
+    margin: 1rem 0 0.5rem;
+  }
+
+  .course-modal__desc {
+    line-height: 1.55;
+  }
+}
+
+/* Дополнительное уменьшение на очень узких экранах */
+@media (max-width: 380px) {
+  html {
+    font-size: 87.5%; /* 14px */
   }
 }
 
